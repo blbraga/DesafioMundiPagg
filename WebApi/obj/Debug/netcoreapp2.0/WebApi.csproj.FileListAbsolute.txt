@@ -9,3 +9,5 @@ E:\Projetos\DesafioMundiPagg\WebApi\obj\Debug\netcoreapp2.0\WebApi.AssemblyInfoI
 E:\Projetos\DesafioMundiPagg\WebApi\obj\Debug\netcoreapp2.0\WebApi.AssemblyInfo.cs
 E:\Projetos\DesafioMundiPagg\WebApi\obj\Debug\netcoreapp2.0\WebApi.dll
 E:\Projetos\DesafioMundiPagg\WebApi\obj\Debug\netcoreapp2.0\WebApi.pdb
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Debug\netcoreapp2.0\Domain.dll
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Debug\netcoreapp2.0\Domain.pdb

@@ -12,7 +12,7 @@ namespace Desafio.Controllers
 {
     public class CustomController : Controller
     {
-        public TransactionReturn Gateway(string key, Transaction obj, string url)
+        public Transaction Gateway(string key, Transaction obj, string url)
         {
             try
             {
@@ -28,12 +28,12 @@ namespace Desafio.Controllers
                 HttpResponseMessage response = request.PostAsync(url, contentData).Result;
                 string stringData = response.Content.ReadAsStringAsync().Result;
 
-                TransactionReturn retorno = JsonConvert.DeserializeObject<TransactionReturn>(stringData);
+                Transaction retorno = JsonConvert.DeserializeObject<Transaction>(stringData);
                 return retorno;
             }
             catch (Exception)
             {
-                return new TransactionReturn();
+                return new Transaction();
             }
         }
     }

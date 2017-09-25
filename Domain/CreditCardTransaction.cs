@@ -8,7 +8,6 @@ namespace Domain
 {
     public class CreditCardTransaction
     {
-        public PriorityEnum Priority { get; set; }
         public string AcquirerMessage { get; set; }
         public bool Success { get; set; }
         public int AmountInCents { get; set; }
