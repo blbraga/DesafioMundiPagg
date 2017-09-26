@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend:dev
+    build:
+      args:
+        source: obj/Docker/empty/
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_frontend$
+    volumes:
+      - E:\Projetos\DesafioMundiPagg\FrontEnd:/app
+      - C:\Users\BRENO\vsdbg:/remote_debugger:ro
+      #- $nuget_user_folder_frontend$:/root/.nuget/packages:ro
+#$nuget_fallback_packages_volume_mapping_frontend$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_frontend$ bin/Debug/netcoreapp2.0/FrontEnd.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""
+
+  webapi:
+    image: webapi:dev
+    build:
+      args:
+        source: obj/Docker/empty/
+    environment:
+      - DOTNET_USE_POLLING_FILE_WATCHER=1
+      #- NUGET_FALLBACK_PACKAGES=$container_paths_to_fallback_packages_webapi$
+    volumes:
+      - E:\Projetos\DesafioMundiPagg\WebApi:/app
+      - C:\Users\BRENO\vsdbg:/remote_debugger:ro
+      #- $nuget_user_folder_webapi$:/root/.nuget/packages:ro
+#$nuget_fallback_packages_volume_mapping_webapi$
+    entrypoint: tail -f /dev/null
+    labels:
+      com.microsoft.visualstudio.debuggee.program: "dotnet"
+      #com.microsoft.visualstudio.debuggee.arguments: " $debuggee_arguments_probing_paths_webapi$ bin/Debug/netcoreapp2.0/WebApi.dll"
+      com.microsoft.visualstudio.debuggee.workingdirectory: "/app"
+      com.microsoft.visualstudio.debuggee.killprogram: "/bin/bash -c \"if PID=$$(pidof -x dotnet); then kill $$PID; fi\""

@@ -1,0 +1,13 @@
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Release\netcoreapp2.0\WebApi.deps.json
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Release\netcoreapp2.0\WebApi.runtimeconfig.json
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Release\netcoreapp2.0\WebApi.runtimeconfig.dev.json
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Release\netcoreapp2.0\WebApi.dll
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Release\netcoreapp2.0\WebApi.pdb
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Release\netcoreapp2.0\Domain.dll
+E:\Projetos\DesafioMundiPagg\WebApi\bin\Release\netcoreapp2.0\Domain.pdb
+E:\Projetos\DesafioMundiPagg\WebApi\obj\Release\netcoreapp2.0\WebApi.csprojResolveAssemblyReference.cache
+E:\Projetos\DesafioMundiPagg\WebApi\obj\Release\netcoreapp2.0\WebApi.csproj.CoreCompileInputs.cache
+E:\Projetos\DesafioMundiPagg\WebApi\obj\Release\netcoreapp2.0\WebApi.AssemblyInfoInputs.cache
+E:\Projetos\DesafioMundiPagg\WebApi\obj\Release\netcoreapp2.0\WebApi.AssemblyInfo.cs
+E:\Projetos\DesafioMundiPagg\WebApi\obj\Release\netcoreapp2.0\WebApi.dll
+E:\Projetos\DesafioMundiPagg\WebApi\obj\Release\netcoreapp2.0\WebApi.pdb

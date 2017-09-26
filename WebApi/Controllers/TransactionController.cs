@@ -16,18 +16,20 @@ namespace WebApi.Controllers
     {
         // GET api/transaction
         [HttpGet]
-        public string Get(string key)
+        public string Get(string key, string lancamentos)
         {
-            var lst = new List<Transaction>();
-            var url = "https://sandbox.mundipaggone.com/Sale";
-            var i = 1;
-
-            using (var reader = new StreamReader(@"d:\arquivo.csv"))
+            try
             {
-                while (!reader.EndOfStream)
+                var lst = new List<Transaction>();
+                var url = "https://sandbox.mundipaggone.com/Sale";
+                var i = 1;
+
+                var lstLanc = lancamentos.Split("\r\n");
+
+                foreach (var linha in lstLanc)
                 {
-                    var line = reader.ReadLine();
-                    var values = line.Split(';');
+
+                    var values = linha.Split(';');
 
                     var creditCard = new CreditCardTransaction()
                     {
@@ -50,18 +52,23 @@ namespace WebApi.Controllers
 
                     i++;
                 }
-            }
 
-            foreach (var obj in lst.OrderByDescending(x => x.Priority))
+                foreach (var obj in lst.OrderByDescending(x => x.Priority))
+                {
+                    var result = Gateway(key, obj, url);
+                    result.Priority = obj.Priority;
+                    result.FileOrder = obj.FileOrder;
+
+                    lst[lst.IndexOf(obj)] = result;
+                }
+
+                return JsonConvert.SerializeObject(lst.OrderByDescending(x => x.Priority));
+            }
+            catch (Exception ex)
             {
-                var result = Gateway(key, obj, url);
-                result.Priority = obj.Priority;
-                result.FileOrder = obj.FileOrder;
-
-                lst[lst.IndexOf(obj)] =  result;
+                var erro = ex.Message;
+                return JsonConvert.SerializeObject(erro);
             }
-
-            return JsonConvert.SerializeObject(lst.OrderByDescending(x => x.Priority)); ;
         }
         
     }
