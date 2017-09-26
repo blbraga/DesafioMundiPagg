@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Desafio MundiPagg";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <input type="file" id="upArquivo" /><br />
+        <button type="button" class="btn btn-primary btn-lg " id="btRun" data-loading-text="<i class='fa fa-circle-o-notch fa-spin'></i> Processando">Executar</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table id="tbStats" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Prioridade</th>
+                    <th>Ordem no arquivo</th>
+                    <th>Ordem no processamento</th>
+                    <th>Tempo para processar</th>
+                    <th>Resultado</th>
+                    <th>Data/Hora Processamento</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="6"><i>Nenhum arquivo processado</i></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+@section scripts {
+    <script src="~/js/Home/Index.js" asp-append-version="true"></script>
+    <script>
+        var urlWebApi = '@ViewBag.WebApi';
+        var merchantKey = '@ViewBag.MerchantKey';
+    </script>
+}
