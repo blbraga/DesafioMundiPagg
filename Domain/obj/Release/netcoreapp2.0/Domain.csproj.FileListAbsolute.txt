@@ -1,9 +1,0 @@
-E:\Projetos\DesafioMundiPagg\Domain\bin\Release\netcoreapp2.0\Domain.deps.json
-E:\Projetos\DesafioMundiPagg\Domain\bin\Release\netcoreapp2.0\Domain.dll
-E:\Projetos\DesafioMundiPagg\Domain\bin\Release\netcoreapp2.0\Domain.pdb
-E:\Projetos\DesafioMundiPagg\Domain\obj\Release\netcoreapp2.0\Domain.csprojResolveAssemblyReference.cache
-E:\Projetos\DesafioMundiPagg\Domain\obj\Release\netcoreapp2.0\Domain.csproj.CoreCompileInputs.cache
-E:\Projetos\DesafioMundiPagg\Domain\obj\Release\netcoreapp2.0\Domain.AssemblyInfoInputs.cache
-E:\Projetos\DesafioMundiPagg\Domain\obj\Release\netcoreapp2.0\Domain.AssemblyInfo.cs
-E:\Projetos\DesafioMundiPagg\Domain\obj\Release\netcoreapp2.0\Domain.dll
-E:\Projetos\DesafioMundiPagg\Domain\obj\Release\netcoreapp2.0\Domain.pdb
