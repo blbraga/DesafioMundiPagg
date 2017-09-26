@@ -48,7 +48,7 @@ var GetPriority = function (num) {
         return 'Normal';
     }
     else if (num === 1) {
-        return '<span style="color: Yellow;"><strong>Urgente</strong></span>';
+        return '<span style="color: #dacb00;"><strong>Urgente</strong></span>';
     }
     else {
         return '<span style="color: Red;"><strong>Urgente</strong></span>';
